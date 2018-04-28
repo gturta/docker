@@ -1,0 +1,25 @@
+version: '3'
+services:
+    nginx:
+        build: ./nginx
+        container_name: webserver_nginx
+        ports:
+            - "80:80/tcp"
+            - "443:443/tcp"
+        volumes:
+            - ./nginx/etc/nginx/sites.d:/etc/nginx/sites.d
+            - /etc/letsencrypt:/etc/letsencrypt
+        restart: unless-stopped
+
+    uwsgi:
+        build: ./uwsgi
+        container_name: webserver_uwsgi
+        volumes:
+            - /usr/share/webapps/turta.ro/:/usr/share/webapps/turta.ro/
+        restart: unless-stopped
+
+networks:
+    default:
+        external:
+            name: docker-net
+
