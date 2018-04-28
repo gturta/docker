@@ -1,0 +1,19 @@
+server {
+	listen 80;
+   	server_name cups.turta.ro;
+	return 301 https://$server_name$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name cups.turta.ro;
+	location / {
+		proxy_pass http://172.20.1.10:631; #nas
+		proxy_http_version 1.1;
+    	proxy_set_header Upgrade $http_upgrade;
+    	proxy_set_header Connection "upgrade";
+	}
+ssl_certificate /etc/letsencrypt/live/turta.ro/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/turta.ro/privkey.pem; # managed by Certbot
+
+}
+

@@ -23,9 +23,12 @@ services:
     cups:
         build: ./cups
         image: gturta/cups
+        hostname: cups.turta.ro
         ports:
             - "631:631/tcp"
         restart: unless-stopped
+        volumes:
+            - /etc/letsencrypt:/etc/letsencrypt
 
     avahi:
         build: ./avahi

@@ -5,7 +5,6 @@
  <service>
    <type>_smb._tcp</type>
    <port>445</port>
-   <host-name>nas.local</host-name>
  </service>
  <service>
    <type>_device-info._tcp</type>

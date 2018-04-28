@@ -1,0 +1,19 @@
+version: '3'
+services:
+    proxy:
+        build: ./proxy
+        container_name: proxy
+        networks:
+            - docker-net
+        ports:
+            - "80:80/tcp"
+            - "443:443/tcp"
+        volumes:
+            - ./etc/nginx/sites.d:/etc/nginx/sites.d
+            - /etc/letsencrypt:/etc/letsencrypt
+        restart: unless-stopped
+
+networks:
+    docker-net:
+        external: true
+
