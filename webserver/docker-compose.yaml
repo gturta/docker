@@ -7,7 +7,7 @@ services:
             - "80:80/tcp"
             - "443:443/tcp"
         volumes:
-            - ./nginx/etc/nginx/sites.d:/etc/nginx/sites.d
+            - ./nginx/etc/nginx/sites.d:/etc/nginx/conf.d
             - /etc/letsencrypt:/etc/letsencrypt
         restart: unless-stopped
 

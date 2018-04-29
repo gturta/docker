@@ -1,0 +1,22 @@
+version: '3'
+services:
+    transferbox:
+        build: .
+        image: transferbox
+        container_name: transferbox
+        volumes:
+            - "/mnt/storage/Downloads/torrents:/torrents"
+        ports:
+            - "9091:9091/tcp"
+            - "51413:51413/tcp"
+        devices:
+            - "/dev/net/tun:/dev/net/tun"
+        cap_add:
+            - NET_ADMIN
+        restart: on-failure
+
+networks:
+    default:
+        external: 
+            name: docker-net
+

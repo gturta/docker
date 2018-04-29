@@ -25,7 +25,7 @@ services:
       - /mnt/storage/Media:/data
 
   sonarr:
-    container_name: sonarr
+    container_name: mediabox_sonarr
     image: linuxserver/sonarr
     restart: unless-stopped
     ports:
@@ -38,7 +38,7 @@ services:
       - /mnt/storage/Downloads/torrents/downloaded/:/downloads
     
   radarr:
-    container_name: radarr
+    container_name: mediabox_radarr
     image: linuxserver/radarr
     restart: unless-stopped
     ports:
@@ -50,6 +50,18 @@ services:
       - /mnt/storage/Media/Movies/Filme/:/movies
       - /mnt/storage/Downloads/torrents/downloaded/:/downloads
     
+  jackett:
+    container_name: mediabox_jackett
+    image: linuxserver/jackett
+    restart: unless-stopped
+    ports:
+      - "9117:9117/tcp"
+    environment:
+      - TZ="Europe/Bucharest"
+    volumes:
+      - jackett-db:/config
+      - /mnt/storage/Downloads/torrents/input/:/downloads
+
 volumes:
   plex-db:
       external: true
@@ -59,6 +71,9 @@ volumes:
       external: true
   radarr-db:
       external: true
+  jackett-db:
+      external: true
+
 
 networks:
   default:
