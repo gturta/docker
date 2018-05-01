@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk --no-cache add transmission-daemon openvpn supervisor ulogd
-VOLUME ["/torrents", "/etc/openvpn/client"]
+VOLUME ["/downloads", "/var/run/transmission"]
 ENV TRANSMISSION_HOME="/var/run/transmission/"
 
 COPY ["./etc/", "/etc/"]

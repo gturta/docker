@@ -1,0 +1,86 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 3 (0x3)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: DC=ro, DC=turta, O=Turta, OU=Turta Signing CA, CN=Turta Signing CA
+        Validity
+            Not Before: Mar 11 13:28:31 2017 GMT
+            Not After : Mar 11 13:28:31 2019 GMT
+        Subject: DC=ro, DC=turta, O=Turta, CN=*.turta.ro
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:d0:3e:2c:b8:ca:86:57:43:bf:75:f6:42:d3:ca:
+                    7f:63:e5:1e:77:cc:d6:5d:7a:63:cd:ac:b0:55:fe:
+                    a1:76:0b:7b:85:3b:db:78:25:82:2c:87:4a:bd:fb:
+                    c0:b4:88:c5:f1:8b:ab:bf:4f:0c:84:bc:df:76:ed:
+                    6f:c8:c5:b9:fb:44:ed:2c:61:cc:f2:0e:73:b4:d1:
+                    27:93:26:bb:d9:ed:0d:a1:b4:d5:5c:15:cb:75:00:
+                    86:16:32:5a:58:32:42:67:de:41:a2:d6:e8:f3:bd:
+                    c6:6b:90:2b:ee:83:3a:1f:23:d2:38:98:e5:78:08:
+                    68:06:1b:7b:08:5f:30:56:a0:8b:0e:5e:a9:f3:70:
+                    11:65:c4:2d:31:86:44:87:35:82:7c:9a:06:f9:61:
+                    1c:35:31:18:51:18:79:91:32:e5:52:34:f6:1e:7f:
+                    81:43:3f:b0:91:46:7c:65:fc:59:8a:2d:ce:3c:7a:
+                    5b:24:52:3e:89:fc:3f:c5:04:01:df:95:d0:d4:f3:
+                    92:28:28:07:eb:b9:4f:ae:48:51:4f:ec:d3:4d:b6:
+                    60:d2:dc:02:5a:cc:54:f4:c9:f4:f9:18:d7:0d:7e:
+                    3d:36:07:66:12:47:2c:e1:7d:a7:6e:ac:ba:48:78:
+                    2f:e4:c2:25:35:34:4e:70:ca:97:d9:34:e4:e3:1d:
+                    82:13
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Subject Key Identifier: 
+                56:B9:B7:1C:42:CE:CD:99:FD:9F:85:9E:C2:F3:3A:A7:FC:8C:50:DF
+            X509v3 Authority Key Identifier: 
+                keyid:23:0D:35:2E:D7:FD:7C:3D:B7:80:42:95:09:FF:61:C8:2A:0D:F1:1B
+
+            X509v3 Subject Alternative Name: 
+                DNS:turta.ro, DNS:*.turta.ro
+    Signature Algorithm: sha256WithRSAEncryption
+         87:af:e0:95:d6:dd:ef:ba:46:4e:d5:42:df:9a:0f:85:3d:c5:
+         cb:65:50:b1:b9:e8:c6:72:27:13:ac:72:10:25:fc:fe:c6:8d:
+         48:1e:66:cc:63:da:81:6c:2c:da:2f:1b:fc:18:6b:84:54:ab:
+         d0:cf:e3:34:7d:6f:6a:d0:25:d3:e2:d7:6e:87:e2:59:4e:f4:
+         45:39:af:1d:a3:1a:cd:b7:6f:72:e0:79:62:d5:04:d3:14:13:
+         2a:fe:8a:6c:8c:64:45:af:49:bd:dd:10:68:9d:b3:87:e3:43:
+         48:68:b0:08:81:13:92:4e:a0:47:d6:99:37:f4:d6:e6:df:31:
+         ce:29:2b:72:9f:30:eb:a4:ef:17:4c:44:b8:91:ae:3b:c2:72:
+         5a:73:1d:5d:d8:26:75:93:00:ab:3d:46:98:08:d5:b3:0b:3e:
+         e0:cd:6b:72:9b:b1:0d:08:62:62:c2:92:86:09:9a:7f:40:6f:
+         01:b1:7b:a6:54:33:97:3f:f1:bb:8a:79:4d:9a:2c:81:7c:6b:
+         54:79:08:04:7e:39:fa:c3:8d:73:07:aa:5c:10:02:3e:32:a1:
+         b0:ec:55:bc:4b:c4:85:49:cc:cf:51:f8:3a:18:80:1c:0f:9e:
+         f5:3e:0d:1f:66:d0:83:1e:65:61:02:34:4d:fe:f2:45:d0:17:
+         ba:ea:0f:29
+-----BEGIN CERTIFICATE-----
+MIID2zCCAsOgAwIBAgIBAzANBgkqhkiG9w0BAQsFADBxMRIwEAYKCZImiZPyLGQB
+GRYCcm8xFTATBgoJkiaJk/IsZAEZFgV0dXJ0YTEOMAwGA1UECgwFVHVydGExGTAX
+BgNVBAsMEFR1cnRhIFNpZ25pbmcgQ0ExGTAXBgNVBAMMEFR1cnRhIFNpZ25pbmcg
+Q0EwHhcNMTcwMzExMTMyODMxWhcNMTkwMzExMTMyODMxWjBQMRIwEAYKCZImiZPy
+LGQBGRYCcm8xFTATBgoJkiaJk/IsZAEZFgV0dXJ0YTEOMAwGA1UECgwFVHVydGEx
+EzARBgNVBAMMCioudHVydGEucm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDQPiy4yoZXQ7919kLTyn9j5R53zNZdemPNrLBV/qF2C3uFO9t4JYIsh0q9
++8C0iMXxi6u/TwyEvN927W/Ixbn7RO0sYczyDnO00SeTJrvZ7Q2htNVcFct1AIYW
+MlpYMkJn3kGi1ujzvcZrkCvugzofI9I4mOV4CGgGG3sIXzBWoIsOXqnzcBFlxC0x
+hkSHNYJ8mgb5YRw1MRhRGHmRMuVSNPYef4FDP7CRRnxl/FmKLc48elskUj6J/D/F
+BAHfldDU85IoKAfruU+uSFFP7NNNtmDS3AJazFT0yfT5GNcNfj02B2YSRyzhfadu
+rLpIeC/kwiU1NE5wypfZNOTjHYITAgMBAAGjgZ4wgZswDgYDVR0PAQH/BAQDAgWg
+MAkGA1UdEwQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB0GA1Ud
+DgQWBBRWubccQs7Nmf2fhZ7C8zqn/IxQ3zAfBgNVHSMEGDAWgBQjDTUu1/18PbeA
+QpUJ/2HIKg3xGzAfBgNVHREEGDAWggh0dXJ0YS5yb4IKKi50dXJ0YS5ybzANBgkq
+hkiG9w0BAQsFAAOCAQEAh6/gldbd77pGTtVC35oPhT3Fy2VQsbnoxnInE6xyECX8
+/saNSB5mzGPagWws2i8b/BhrhFSr0M/jNH1vatAl0+LXbofiWU70RTmvHaMazbdv
+cuB5YtUE0xQTKv6KbIxkRa9Jvd0QaJ2zh+NDSGiwCIETkk6gR9aZN/TW5t8xzikr
+cp8w66TvF0xEuJGuO8JyWnMdXdgmdZMAqz1GmAjVsws+4M1rcpuxDQhiYsKShgma
+f0BvAbF7plQzlz/xu4p5TZosgXxrVHkIBH45+sONcweqXBACPjKhsOxVvEvEhUnM
+z1H4OhiAHA+e9T4NH2bQgx5lYQI0Tf7yRdAXuuoPKQ==
+-----END CERTIFICATE-----

@@ -35,7 +35,7 @@ services:
     volumes:
       - sonarr-db:/config
       - /mnt/storage/Media/Movies/Seriale/:/tv
-      - /mnt/storage/Downloads/torrents/downloaded/:/downloads
+      - /mnt/storage/Downloads/torrents/:/downloads
     
   radarr:
     container_name: mediabox_radarr
@@ -48,7 +48,7 @@ services:
     volumes:
       - radarr-db:/config
       - /mnt/storage/Media/Movies/Filme/:/movies
-      - /mnt/storage/Downloads/torrents/downloaded/:/downloads
+      - /mnt/storage/Downloads/torrents/:/downloads
     
   jackett:
     container_name: mediabox_jackett

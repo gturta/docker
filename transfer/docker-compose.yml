@@ -5,7 +5,8 @@ services:
         image: transferbox
         container_name: transferbox
         volumes:
-            - "/mnt/storage/Downloads/torrents:/torrents"
+            - "/mnt/storage/Downloads/torrents:/downloads"
+            - "transmission-db:/var/run/transmission"
         ports:
             - "9091:9091/tcp"
             - "51413:51413/tcp"
@@ -13,10 +14,12 @@ services:
             - "/dev/net/tun:/dev/net/tun"
         cap_add:
             - NET_ADMIN
-        restart: on-failure
+        restart: always
 
 networks:
     default:
         external: 
             name: docker-net
-
+volumes:
+    transmission-db:
+        external: true
