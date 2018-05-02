@@ -2,7 +2,7 @@ version: "3"
 services:
   plex:
     container_name: plex
-    image: plexinc/pms-docker
+    image: plexinc/pms-docker:beta
     restart: unless-stopped
     ports:
       - 32400:32400/tcp
@@ -16,7 +16,6 @@ services:
       - 32414:32414/udp
     environment:
       - TZ="Europe/Bucharest"
-      - PLEX_CLAIM="claim-5KAp2Bhx9soqNPx9bKBz"
       - ADVERTISE_IP=http://172.20.1.10:32400/
     hostname: plex
     volumes:

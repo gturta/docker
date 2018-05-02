@@ -1,0 +1,25 @@
+version: "3"
+services:
+    postfix:
+        build: .
+        container_name: mail
+        image: mail
+        ports:
+            - "587:587/tcp"
+            - "993:993/tcp"
+            - "25:25/tcp"
+            - "143:143/tcp"
+        volumes:
+            - "mail-spool:/var/mail"
+            - "/etc/letsencrypt:/etc/letsencrypt:ro"
+        networks:
+            - docker-net
+        restart: unless-stopped
+
+networks: 
+    docker-net:
+        external: true
+
+volumes:
+    mail-spool:
+        external: true

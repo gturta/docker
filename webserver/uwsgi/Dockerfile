@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk --no-cache add uwsgi uwsgi-python3
-VOLUME /usr/share/webapps/turta.ro/
+
 CMD ["/usr/sbin/uwsgi", \
   "--plugins-dir", "/usr/lib/uwsgi/", "--need-plugin", "python3", \
   "--chdir", "/usr/share/webapps/turta.ro", \

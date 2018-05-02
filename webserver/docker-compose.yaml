@@ -7,7 +7,8 @@ services:
             - "80:80/tcp"
             - "443:443/tcp"
         volumes:
-            - ./nginx/etc/nginx/sites.d:/etc/nginx/conf.d
+            - ./nginx/etc/nginx/conf.d:/etc/nginx/conf.d
+            - /usr/share/webapps:/usr/share/webapps
             - /etc/letsencrypt:/etc/letsencrypt
         restart: unless-stopped
 
@@ -15,7 +16,7 @@ services:
         build: ./uwsgi
         container_name: webserver_uwsgi
         volumes:
-            - /usr/share/webapps/turta.ro/:/usr/share/webapps/turta.ro/
+            - /usr/share/webapps/:/usr/share/webapps/
         restart: unless-stopped
 
 networks:
