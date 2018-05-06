@@ -1,0 +1,6 @@
+version: "3"
+services:
+    s6_template:
+        build: .
+        image: s6_template
+        container_name: s6_template
