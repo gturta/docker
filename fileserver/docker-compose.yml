@@ -1,19 +1,26 @@
-version: "3"
+version: "3.2"
 services:
     smbd:
         build: ./smbd
         image: gturta/smbd
+        container_name: fileserver_smbd
         ports: 
          - "139:139/tcp"
          - "445:445/tcp"
         volumes:
-         - /mnt/storage:/mnt
+            - type: bind
+              source: /mnt/storage
+              target: /mnt/storage
+              bind:
+                  #this is not working, better manually create the container
+                  propagation: "shared"
         tty: true
         restart: unless-stopped
 
     nmbd:
         build: ./nmbd
         image: gturta/nmbd
+        container_name: fileserver_nmbd
         ports:
             - "137:137/udp"
             - "138:138/udp"
@@ -23,6 +30,7 @@ services:
     cups:
         build: ./cups
         image: gturta/cups
+        container_name: fileserver_cups
         hostname: cups.turta.ro
         ports:
             - "631:631/tcp"
@@ -33,6 +41,7 @@ services:
     avahi:
         build: ./avahi
         image: gturta/avahi
+        container_name: fileserver_avahi
         ports:
             - "5353:5353/udp"
         network_mode: "host"
