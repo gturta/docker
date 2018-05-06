@@ -1,12 +1,14 @@
 version: "3.2"
 services:
-    smbd:
-        build: ./smbd
-        image: gturta/smbd
-        container_name: fileserver_smbd
+    samba:
+        build: ./samba
+        image: gturta/samba
+        container_name: fileserver_samba
         ports: 
          - "139:139/tcp"
          - "445:445/tcp"
+         - "137:137/udp"
+         - "138:138/udp"
         volumes:
             - type: bind
               source: /mnt/storage
@@ -14,18 +16,8 @@ services:
               bind:
                   #this is not working, better manually create the container
                   propagation: "shared"
-        tty: true
         restart: unless-stopped
-
-    nmbd:
-        build: ./nmbd
-        image: gturta/nmbd
-        container_name: fileserver_nmbd
-        ports:
-            - "137:137/udp"
-            - "138:138/udp"
         tty: true
-        restart: unless-stopped
 
     cups:
         build: ./cups
