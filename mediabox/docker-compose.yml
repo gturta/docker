@@ -1,8 +1,9 @@
 version: "3"
 services:
   plex:
+    build: ./plex
+    image: plex_vaapi 
     container_name: plex
-    image: plexinc/pms-docker:beta
     restart: unless-stopped
     environment:
       - TZ="Europe/Bucharest"
@@ -10,7 +11,11 @@ services:
       - plex-db:/config
       - plex-transcode:/transcode
       - /mnt/storage/Media:/data
+      - /mnt/storage/Downloads:/downloads
     network_mode: host
+    devices:
+        - /dev/dri:/dev/dri
+
   sonarr:
     container_name: mediabox_sonarr
     image: linuxserver/sonarr
