@@ -15,6 +15,8 @@ services:
     uwsgi:
         build: ./uwsgi
         container_name: webserver_uwsgi
+        ports:
+            - "8001:8001/tcp"
         volumes:
             - /usr/share/webapps/:/usr/share/webapps/
         restart: unless-stopped

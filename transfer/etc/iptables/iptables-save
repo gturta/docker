@@ -7,6 +7,7 @@
 -A OUTPUT -o lo -j ACCEPT
 -A OUTPUT -d 172.18.0.0/16 -j ACCEPT
 -A OUTPUT -d 172.20.1.0/24 -j ACCEPT
+-A OUTPUT -d 10.8.0.0/24 -j ACCEPT
 -A OUTPUT -o tun0 -m owner --uid-owner 101 -j ACCEPT
 -A OUTPUT -m owner --uid-owner 101 -j LOGDROP
 -A LOGDROP -m limit --limit 2/min -j NFLOG --nflog-prefix "IPTables-Dropped: "
